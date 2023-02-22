@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,9 @@ namespace MountainsPuzzle
         private bool isTimerRunning;
         private DateTime startTime;
         private TimeSpan elapsedTime;
+        private const int puzzleRows = 4; // The number of rows in the puzzle grid
+        private const int puzzleColumns = 4; // The number of columns in the puzzle grid
+
         public MountainsPuzzle()
         {
             InitializeComponent();
@@ -57,7 +61,7 @@ namespace MountainsPuzzle
 
                 startTime = DateTime.Now;
                 elapsedTime = TimeSpan.Zero;
-                Timelbl.Text = "Game Time: 00:00:00";
+                Timelbl.Text = "Game time: 00:00:00";
 
             }
             
@@ -71,7 +75,7 @@ namespace MountainsPuzzle
             startTime = DateTime.Now;
             isTimerRunning=false;
 
-        }
+        }      
 
         private void GameTime_Tick(object sender, EventArgs e)
         {
@@ -81,6 +85,13 @@ namespace MountainsPuzzle
                 Timelbl.Text = "Game time: " + elapsedTime.ToString(@"hh\:mm\:ss");
             }
             
+
+        }
+
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
 
         }
     }

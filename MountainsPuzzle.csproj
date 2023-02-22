@@ -130,9 +130,9 @@
     <Resource Include="mountains4x4\mountains2-3-3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="mountains4x4\mountains2.jpg">
+    <Content Include="mountains4x4\mountains2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="mountains4x4\mountain-summit_icon-icons.com_70440.ico">

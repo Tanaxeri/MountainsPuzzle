@@ -30,40 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MountainsPuzzle));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.OriginPic = new System.Windows.Forms.PictureBox();
+            this.puzzlepan = new System.Windows.Forms.Panel();
             this.Timelbl = new System.Windows.Forms.Label();
             this.GameTime = new System.Windows.Forms.Timer(this.components);
             this.PauseGamebtn = new System.Windows.Forms.Button();
             this.Shufflebtn = new System.Windows.Forms.Button();
             this.Exitbtn = new System.Windows.Forms.Button();
+            this.OriginPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.OriginPic)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // puzzlepan
             // 
-            this.panel1.Location = new System.Drawing.Point(63, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(778, 641);
-            this.panel1.TabIndex = 0;
-            // 
-            // OriginPic
-            // 
-            this.OriginPic.BackgroundImage = global::MountainsPuzzle.Properties.Resources.mountains2;
-            this.OriginPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.OriginPic.Location = new System.Drawing.Point(906, 12);
-            this.OriginPic.Name = "OriginPic";
-            this.OriginPic.Size = new System.Drawing.Size(262, 234);
-            this.OriginPic.TabIndex = 1;
-            this.OriginPic.TabStop = false;
+            this.puzzlepan.Location = new System.Drawing.Point(63, 39);
+            this.puzzlepan.Name = "puzzlepan";
+            this.puzzlepan.Size = new System.Drawing.Size(778, 641);
+            this.puzzlepan.TabIndex = 0;
             // 
             // Timelbl
             // 
             this.Timelbl.AutoSize = true;
-            this.Timelbl.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Timelbl.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Timelbl.Location = new System.Drawing.Point(915, 284);
             this.Timelbl.Name = "Timelbl";
-            this.Timelbl.Size = new System.Drawing.Size(255, 54);
+            this.Timelbl.Size = new System.Drawing.Size(151, 33);
             this.Timelbl.TabIndex = 2;
             this.Timelbl.Text = "00:00:00";
             // 
@@ -100,6 +90,17 @@
             this.Exitbtn.TabIndex = 5;
             this.Exitbtn.Text = "Exit";
             this.Exitbtn.UseVisualStyleBackColor = true;
+            this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
+            // 
+            // OriginPic
+            // 
+            this.OriginPic.BackgroundImage = global::MountainsPuzzle.Properties.Resources.mountains2;
+            this.OriginPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OriginPic.Location = new System.Drawing.Point(906, 12);
+            this.OriginPic.Name = "OriginPic";
+            this.OriginPic.Size = new System.Drawing.Size(262, 234);
+            this.OriginPic.TabIndex = 1;
+            this.OriginPic.TabStop = false;
             // 
             // MountainsPuzzle
             // 
@@ -111,7 +112,7 @@
             this.Controls.Add(this.PauseGamebtn);
             this.Controls.Add(this.Timelbl);
             this.Controls.Add(this.OriginPic);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.puzzlepan);
             this.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -127,13 +128,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox OriginPic;
+        private System.Windows.Forms.Panel puzzlepan;
         private System.Windows.Forms.Label Timelbl;
         private System.Windows.Forms.Timer GameTime;
         private System.Windows.Forms.Button PauseGamebtn;
         private System.Windows.Forms.Button Shufflebtn;
         private System.Windows.Forms.Button Exitbtn;
+        private System.Windows.Forms.PictureBox OriginPic;
     }
 }
 
