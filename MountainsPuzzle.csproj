@@ -135,9 +135,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mountains4x4\mountain-summit_icon-icons.com_70440.ico">
+    <Content Include="mountains4x4\mountain-summit_icon-icons.com_70440.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
